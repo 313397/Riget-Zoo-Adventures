@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Accessibility settings</b></h1>
+<br>
+<p>You can change the look of this website and allow any additional accessibility features to accommodate your preferences and needs</p>
+<br>
+<br>
+<br>
+<br>
+<label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">
+    AI-generated voice audio reading:
+</label>
+<select name="ai_generated_audio_voice_reading" style="width:100px; font-size:30px; font-family:'Arial';">
+    <option style="width:100px;">Yes</option>
+    <option style="width:100px;">No</option>
+</select>
+<br>
+<br>
+<br>
+<br>
+<label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">
+    Text size:
+</label>
+<select name="font_size" style="width:130px; font-size:30px; font-family:'Arial';">
+    <option style="width:130px;">25px</option>
+    <option style="width:130px;">50px</option>
+    <option style="width:130px;">75px</option>
+    <option style="width:130px;">100px</option>
+</select>
+<p></p>
+<br>
+<p></p>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Reserve and book tickets for zoo</b></h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <p style="font-size:30px; font-family:'Arial'; color:rgb(255, 255, 255); background-color:red;">{{ message }}</p>
+        <br>
+        <br>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<br>
+<p>Reserve and book a ticket for the zoo by entering the number of tickets, time and date of your choice. When entering the date, please enter the day, month and year as numbers in the DD/MM/YYYY format.</p>
+<br>
+<p>You can enter a date of your choice and any of the times given below in the dropdown options for the ticket and when you reserve and book the tickets, we will let you know if your tickets are valid for your number of tickets, time and date.</p>
+<br>
+<p>Tickets will be free at no given price.</p>
+<br>
+<br>
+<br>
+<form action="{{ url_for('reserve_book_zoo_tickets') }}" method="POST">                                            
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">Number of tickets:</label>                                                                                    
+    <input type="text" class="input-box" name="number_of_tickets" placeholder="Number of tickets" style="width:300px; height:50px; font-size:30px; font-family:'Arial'" required="required" />
+    <br>
+    <br>
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">
+        Time:
+    </label>
+    <select name="time" style="width:300px; font-size:30px; font-family:'Arial';">
+        <option style="width:100px;">09:00 - 11:00</option>
+        <option style="width:100px;">11:00 - 13:00</option>
+        <option style="width:100px;">13:00 - 15:00</option>
+        <option style="width:100px;">15:00 - 17:00</option>
+        <option style="width:100px;">17:00 - 19:00</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">Date:</label>
+    <input type="text" class="input-box" placeholder="DD" name="DD" style="width:100px; font-size:30px; font-family:'Arial';" required>
+    /
+    <input type="text" class="input-box" placeholder="MM" name="MM" style="width:100px; font-size:30px; font-family:'Arial';" required>
+    /
+    <input type="text" class="input-box" placeholder="YYYY" name="YYYY" style="width:100px; font-size:30px; font-family:'Arial';" required>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary btn-block btn-large" style="font-size:30px; font-family:'Arial'; color:white; background-color:darkblue;">Reserve and book tickets</button>
+</form>
+<p></p>
+<br>
+<p></p>
+
+</body>
+</html>

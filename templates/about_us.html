@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>About Us</b></h1>
+<br>
+<p>Riget Zoo Adventures is a local attraction that was founded in 2021 with around 3.6 million visitors annually. We have a lot to offer to people who want to visit us.</p>
+<br>
+<p>Riget Zoo Adventures was founded after feedback about the need for more fun and entertainment from different families. Since then, we have been making improvements to our attractions and facilities to attract more families to visit us.</p>
+<br>
+<p>Riget Zoo Adventures hopes to increase its visitors and popularity among families in the long term.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="static/jeremy-avery-hht33rAqHi8-unsplash.jpg" alt="Lions at a zoo" width="800" height="500" style="float:left;">
+<img src="static/michael-hutchinson-5eUmu7BAIgQ-unsplash.jpg" alt="Penguins at a zoo" width="900" height="500" style="float:right;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="static/daiga-ellaby-Sg_OwwU2Z9o-unsplash.jpg" alt="Boy feeding deer at a zoo" width="700" height="500">
+
+</body>
+</html>

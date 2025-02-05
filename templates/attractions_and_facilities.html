@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Attractions and facilities</b></h1>
+<br>
+<p>At Riget Zoo Adventures, we have a range of attractions and facilities to offer to people who want to visit:</p>
+<br>
+<p>Our safari-style wildlife zoo offers visitors the chance to experience safari wildlife within our zoo with safari jeep rides and the opportunity to see different animals such as lions, zebras, tigers, cheetahs etc.</p>
+<br>
+<p>Our on-site hotel which visitors can book a stay at offers a good view of our zoo and our other facilities.</p>
+<br>
+<p>Our educational visits offer the chance for visitors to learn more about the animals that we have and learn more about us.</p>
+<br>
+<br>
+<p>Whatever it is that visitors want to do, we have plenty of options.</p>
+<br>
+<br>
+<br>
+<br>
+<img src="static/david-clode-YV_WwNH09cI-unsplash.jpg" alt="Safari with jeep and wildebeests" width="800" height="500" style="float:left;">
+<img src="static/nikolay-tchaouchev-ttpNCevA1tA-unsplash.jpg" alt="Giraffes and zebras at zoo" width="700" height="500" style="float:right;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="static/francesca-saraco-_dS27XGgRyQ-unsplash.jpg" alt="Coconut palm trees in hotel lobby" width="800" height="500">
+
+</body>
+</html>

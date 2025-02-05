@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Contact Us</b></h1>
+<br>
+<p><b>Email:</b> rigetzooadventures@mail.com</p>
+<p><b>Phone number:</b> 07216453892</p>
+<p><b>Address:</b> 34 Colby Way, Hitcham, Valta, VL58 1XG</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><b><span>Opening times:</span></b></p>
+<br>
+<p><b>Monday-Friday:</b> 9am - 8pm</p>
+<p><b>Saturday-Sunday:</b> 10am - 6pm</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="static/erik-karits-e6i80DDiHxc-unsplash.jpg" alt="Hedgehog in a field of grass and flowers" width="800" height="500">
+
+</body>
+</html>

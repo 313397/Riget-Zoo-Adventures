@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+    
+</style>
+
+</head>
+<body>
+
+<h1><b>Success</b></h1>
+<br>
+<br>
+<br>
+<p>Your booking was successfully made! We will be in touch with you regarding your booking and if your chosen number of people/tickets, time and date will be possible.</p>
+<br>
+<br>
+<br>
+<button style="font-size:30px; font-family:'Calibri'; text-decoration:none; font-size:30px; font-family:'Arial'; color:white; background-color:darkblue;">
+    <a href="{{ url_for('index') }}" style="color:white; text-decoration:none;">Back to home page</a>
+</button>
+
+</body>
+</html>

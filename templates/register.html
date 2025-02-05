@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Register</b></h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <p style="font-size:30px; font-family:'Arial'; color:rgb(255, 255, 255); background-color:red;">{{ message }}</p>
+        <br>
+        <br>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<br>
+<form method="post">
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">Name:</label>
+    <input type="text" class="input-box" name="name" placeholder="Name" style="width:500px; height:50px; font-size:30px; font-family:'Arial'" required="required" />
+    <br>
+    <br>
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">Email:</label>
+    <input type="email" class="input-box" name="email" placeholder="Email" style="width:500px; height:50px; font-size:30px; font-family:'Arial'" required="required" />
+    <br>
+    <br>
+    <label style="font-size:30px; font-family:'Arial'; background-color:lightblue;">Password:</label>
+    <input type="password" class="input-box" name="password" placeholder="Password" style="width:500px; height:50px; font-size:30px; font-family:'Arial'" required="required" />
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="submit" style="font-size:30px; font-family:'Arial'; background-color:darkblue; color:white;">Register</button>
+</form>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+        float: left;
+        font-size: 30px;
+        font-family: "Arial";
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: "Arial";
+        color: black;
+        background-color:lightblue;
+    }
+
+    body {
+        background-image: url('static/hu-chen-0LwfbRtQ-ac-unsplash.jpg');
+    }
+
+    span {
+        border-bottom:1px solid black;
+    }
+    
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+      <a href="/"><img src="static/Riget_Zoo_Adventures_website_logo.jpg" style="height:92px; width:300px" alt="Logo image"></a>
+      <a href="/about_us">About Us</a>
+      <a href="/contact_us">Contact Us</a>
+      <a href="/attractions_and_facilities">Attractions and facilities</a>
+      <a href="/educational_visits">Educational visits</a>
+      <a href="/reserve_book_zoo_tickets">Reserve and book tickets for zoo</a>
+      <a href="/book_hotel_stay">Book stay at hotel</a>
+      <a href="/settings">Settings</a>
+      {% if logged_in == false: %}
+      <a href="/login">Log In</a>
+      <a href="/register">Register</a>
+      {% else: %}
+      <a href="/logout">Log Out</a>
+      {% endif %}
+  </div>
+
+<br>
+<h1><b>Educational visits</b></h1>
+<br>
+<p>At Riget Zoo Adventures, we offer educational visits to anyone who wants to learn more about us and the animals that we have at our zoo.</p>
+<br>
+<p>Students can also take part in educational visits and we can accommodate up to 100 students for each educational visit. If the number of students reaches 100 on an educational visit, any additional students will be put on the next educational visit on a different day.</p>
+<br>
+<p>If you have any queries or are unsure about this, feel free to contact us (our contact details are on the contact us page).</p>
+<br>
+<p>Below are some materials provided to support educational visits:</p>
+<br>
+<br>
+<br>
+<p><b><span>www.zooeducationalvisits.com</span></b></p>
+<br>
+<p><b><span>www.animallearning.co.uk</span></b></p>
+<br>
+<p><b><span>www.zooanimals.com</span></b></p>
+<br>
+<p><b><span>www.animalfacts.co.uk</span></b></p>
+<br>
+<p><b><span>www.zoosafariwildlife.com</span></b></p>
+<br>
+<br>
+<br>
+<br>
+<img src="static/omar-lopez-T6zu4jFhVwg-unsplash.jpg" alt="Group of women standing on rock fragment" width="700" height="500" style="float:left;">
+<br>
+
+</body>
+</html>
